@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!-- saved from url=(0090)http://morezan.beacool.com/morethan/web/app/useGuide/guideDetail.html?query=huawei&v=1.0.0 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+    <title>使用指南</title>
+    <link href="./source/bootstrap.css" rel="stylesheet" charset="UTF-8">
+    <link href="./source/base.css" rel="stylesheet" charset="UTF-8">
+    <script type="text/javascript" src="./source/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var detailList = {
+                "OV": [
+                    {
+                        title: '自启动权限设置',
+                        detail: [
+                            {text: '1、打开手机 <span class="fBold">手机管家</span>；'},
+                            {text: '2、选择 <span class="fBold">隐私设置</span> <span class="glyphicon glyphicon-menu-right"></span> <span class="fBold">自启动管理</span>；'},
+                            {text: '3、打开 <span class="fBold">出入预告系统APP</span> 的右侧开关。'}
+                        ]
+                    },
+                    {
+                        title: '后台耗电保护',
+                        detail: [
+                            {text: '1、打开手机 <span class="fBold">设置</span>；'},
+                            {text: '2、选择 <span class="fBold">电池</span> <span class="glyphicon glyphicon-menu-right"></span> <span class="fBold">其他</span>；'},
+                            {text: '3、关闭 <span class="fBold">出入预告系统APP</span> 的后台冻结和自动优化开关。'}
+                        ]
+                    },
+                    {
+                        title: '清理后台保护',
+                        detail: [
+                            {text: '1、按手机的近期任务键调出近期任务；'},
+                            {text: '2、向下划动 <span class="fBold">出入预告系统APP</span> 的图标加入锁定白名单。'}
+                        ]
+                    }
+                ],
+                "huawei": [
+                    {
+                        title: '自启动权限设置',
+                        detail: [
+                            {text: '1、打开手机 <span class="fBold">设置</span>；'},
+                            {text: '2、选择 <span class="fBold">权限管理</span> 中找到 <span class="fBold">出入预告系统APP</span>；'},
+                            {text: '3、选择 <span class="fBold">出入预告系统APP</span> <span class="glyphicon glyphicon-menu-right"></span> <span class="fBold">设置单项权限</span> <span class="glyphicon glyphicon-menu-right"></span> <span class="fBold">应用自启动</span>。'}
+                        ]
+                    },
+                    {
+                        title: '后台耗电保护',
+                        detail: [
+                            {text: '1、打开手机 <span class="fBold">设置</span>；'},
+                            {text: '2、选择 <span class="fBold">电池</span> <span class="glyphicon glyphicon-menu-right"></span> <span class="fBold">锁屏清理应用</span>；'},
+                            {text: '3、找到 <span class="fBold">出入预告系统APP</span> 关闭右侧开关。'}
+                        ]
+                    }
+                ],
+                "meizu": [
+                    {
+                        title: '后台管理设置',
+                        detail: [
+                            {text: '1、打开 <span class="fBold">手机管家</span>；'},
+                            {text: '2、选择 <span class="fBold">权限管理</span> <span class="glyphicon glyphicon-menu-right"></span> <span class="fBold">后台管理</span>；'},
+                            {text: '3、设置 <span class="fBold">出入预告系统APP</span> 为保持后台运行。'}
+                        ]
+                    },
+                    {
+                        title: '清理保护设置',
+                        detail: [
+                            {text: '1、在手机屏幕下方上划调出近期任务；'},
+                            {text: '2、向下划动 <span class="fBold">出入预告系统APP</span> 的图标加入锁定白名单。'}
+                        ]
+                    }
+                ],
+                "other": [
+                    {
+                        title: '其他手机设置',
+                        detail: [
+                            {text: '1、在手机 <span class="fBold">设置</span> 或 <span class="fBold">手机管家</span> 中找到自启动选项为 <span class="fBold">出入预告系统APP</span> 授权；'},
+                            {text: '2、在手机 <span class="fBold">设置</span> 或 <span class="fBold">手机管家</span> 中找到省电管理选项将 <span class="fBold">出入预告系统APP</span>  添加到受保护列表；'},
+                            {text: '3、在手机近期任务里，下划或长按 <span class="fBold">出入预告系统APP</span> 添加到清理保护中。'}
+                        ]
+                    }
+                ],
+                "sanxing": [
+                    {
+                        title: '后台管理设置',
+                        detail: [
+                            {text: '1、安装 <span class="fBold">出入预告系统APP</span> 打开自启动开关。'}
+                        ]
+                    },
+                    {
+                        title: '清理保护设置',
+                        detail: [
+                            {text: '1、长按手机近期任务键调出近期任务；'},
+                            {text: '2、点击 <span class="fBold">出入预告系统APP</span> 右上角的小锁加入白名单。'}
+                        ]
+                    }
+                ],
+                "xiaomi": [
+                    {
+                        title: '自启动权限设置',
+                        detail: [
+                            {text: '1、打开手机 <span class="fBold">安全中心</span>；'},
+                            {text: '2、选择 <span class="fBold">授权管理</span><span class="glyphicon glyphicon-menu-right"></span><span class="fBold">自启动管理</span>；'},
+                            {text: '3、打开 <span class="fBold">出入预告系统APP</span> 的右侧开关。'}
+                        ]
+                    },
+                    {
+                        title: '后台耗电保护',
+                        detail: [
+                            {text: '1、打开手机 <span class="fBold">安全中心</span>；'},
+                            {text: '2、选择 <span class="fBold">电量</span><span class="glyphicon glyphicon-menu-right"></span><span class="fBold">应用智能省电</span>；'},
+                            {text: '3、设置 <span class="fBold">出入预告系统APP</span> 为无限制和允许后台定位。'}
+                        ]
+                    },
+                    {
+                        title: '清理后台保护',
+                        detail: [
+                            {text: '1、按手机的近期任务键调出近期任务；'},
+                            {text: '2、向下划动 <span class="fBold">出入预告系统APP</span> 的图标加入锁定白名单。'}
+                        ]
+                    }
+                ]
+            };
+            var showTitle = {
+                "huawei": "华为手机",
+                "OV": "OOPO/VIVO手机",
+                "xiaomi": "小米手机",
+                "meizu": "魅族手机",
+                "sanxing": "三星手机",
+                "other": "其他手机"
+            }
+            var query = getUrlParam("query");
+            var str = '<div class="title fBold text-center">'+ showTitle[query] +'</div>';
+            var result = detailList[query];
+            for(var i in result){
+                str += '<div class="detail">'+
+                    '       <div class="detail-title fBold">'+ result[i]['title'] +'</div>';
+                for(var j in result[i]['detail']){
+                    str += '       <div class="detail-content">'+ result[i]['detail'][j]['text'] +'</div>';
+
+                }
+                str += '</div>';
+            }
+            $(".guideDetail").html(str);
+        });
+        /**
+         * 获取url中的参数
+         * @param name
+         * @returns {null}
+         */
+        function getUrlParam(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+            var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+            if (r != null) return r[2]; return null; //返回参数值
+        }
+    </script>
+</head>
+<body>
+    <div class="container guideDetail"><div class="title fBold text-center">华为手机</div><div class="detail">       <div class="detail-title fBold">自启动权限设置</div>       <div class="detail-content">1、打开手机 <span class="fBold">设置</span>；</div>       <div class="detail-content">2、选择 <span class="fBold">权限管理</span> 中找到 <span class="fBold">出入预告系统APP</span>；</div>       <div class="detail-content">3、选择 <span class="fBold">出入预告系统APP</span> <span class="glyphicon glyphicon-menu-right"></span> <span class="fBold">设置单项权限</span> <span class="glyphicon glyphicon-menu-right"></span> <span class="fBold">应用自启动</span>。</div></div><div class="detail">       <div class="detail-title fBold">后台耗电保护</div>       <div class="detail-content">1、打开手机 <span class="fBold">设置</span>；</div>       <div class="detail-content">2、选择 <span class="fBold">电池</span> <span class="glyphicon glyphicon-menu-right"></span> <span class="fBold">锁屏清理应用</span>；</div>       <div class="detail-content">3、找到 <span class="fBold">出入预告系统APP</span> 关闭的右侧开关。</div></div></div>
+
+</body></html>

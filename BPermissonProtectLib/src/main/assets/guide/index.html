@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)http://morezan.beacool.com/morethan/web/app/useGuide/phoneList.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+    <title>使用指南</title>
+    <link href="./source/bootstrap.css" rel="stylesheet" charset="UTF-8">
+    <link href="./source/base.css" rel="stylesheet" charset="UTF-8">
+    <script type="text/javascript" src="./source/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var phoneList = [
+                {
+                    text: "华为",
+                    link: "./guideDetail.html?query=huawei&v=1.0.0"
+                },
+                {
+                    text: "小米",
+                    link: "./guideDetail.html?query=xiaomi&v=1.0.0"
+                },
+                {
+                    text: "OPPO/VIVO",
+                    link: "./guideDetail.html?query=OV&v=1.0.0"
+                },
+                {
+                    text: "魅族",
+                    link: "./guideDetail.html?query=meizu&v=1.0.0"
+                },
+                {
+                    text: "三星",
+                    link: "./guideDetail.html?query=sanxing&v=1.0.0"
+                },
+                {
+                    text: "其他",
+                    link: "./guideDetail.html?query=other&v=1.0.0"
+                }
+            ];
+            var str = '';
+            for(var i in phoneList){
+                str += '<li>'+
+                    '       <a href="'+ phoneList[i]['link'] +'">'+
+                    '       '+ phoneList[i]['text'] +' <span class="glyphicon glyphicon-menu-right pull-right"></span>'+
+                    '       <div class="clearfix"></div>'+
+                    '       </a>'+
+                    '</li>';
+            }
+            $(".phone-list .list").html(str);
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="phone-list">
+            <div class="title text-center">请选择您的手机</div>
+            <ul class="list"><li>       <a href="./guideDetail.html?query=huawei&v=1.0.0">       华为 <span class="glyphicon glyphicon-menu-right pull-right"></span>       <div class="clearfix"></div>       </a></li><li>       <a href="http://morezan.beacool.com/morethan/web/app/useGuide/guideDetail.html?query=xiaomi&amp;v=1.0.0">       小米 <span class="glyphicon glyphicon-menu-right pull-right"></span>       <div class="clearfix"></div>       </a></li><li>       <a href="http://morezan.beacool.com/morethan/web/app/useGuide/guideDetail.html?query=OV&amp;v=1.0.0">       OPPO/VIVO <span class="glyphicon glyphicon-menu-right pull-right"></span>       <div class="clearfix"></div>       </a></li><li>       <a href="http://morezan.beacool.com/morethan/web/app/useGuide/guideDetail.html?query=meizu&amp;v=1.0.0">       魅族 <span class="glyphicon glyphicon-menu-right pull-right"></span>       <div class="clearfix"></div>       </a></li><li>       <a href="http://morezan.beacool.com/morethan/web/app/useGuide/guideDetail.html?query=sanxing&amp;v=1.0.0">       三星 <span class="glyphicon glyphicon-menu-right pull-right"></span>       <div class="clearfix"></div>       </a></li><li>       <a href="http://morezan.beacool.com/morethan/web/app/useGuide/guideDetail.html?query=other&amp;v=1.0.0">       其他 <span class="glyphicon glyphicon-menu-right pull-right"></span>       <div class="clearfix"></div>       </a></li></ul>
+        </div>
+    </div>
+
+</body></html>

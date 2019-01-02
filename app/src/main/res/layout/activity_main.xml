@@ -18,7 +18,15 @@
         android:id="@+id/btn_widgets"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="自定义控件" />
+        android:text="自定义控件"
+        android:layout_marginTop="5dp"
+        />
 
+    <Button
+        android:id="@+id/btn_background_management"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="后台权限管理" />
 
 </LinearLayout>

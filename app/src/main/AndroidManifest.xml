@@ -17,11 +17,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".components.services.normal.NormalServiceTestActivity" />
-        <activity android:name=".components.ComponentListActivity"></activity>
+        <activity android:name=".components.ComponentListActivity" />
 
         <service android:name=".components.services.normal.MyService" />
 
+        <activity android:name=".widgets.follow_view.FollowViewTestActivity" />
+        <activity android:name=".widgets.WidgetsListActivity" />
+        <activity android:name=".protect_setting.ProtectSettingActivity"></activity>
     </application>
-
 
 </manifest>
