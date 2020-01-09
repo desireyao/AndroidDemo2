@@ -45,7 +45,7 @@ public class BSensorManager {
     SensorEventListener mSensorEventListener = new SensorEventListener() {
         @Override
         public void onSensorChanged(SensorEvent event) {
-            float degree = event.values[0];
+            int degree = (int) event.values[0];
             if (mOnAngleChangedListener != null) {
                 mOnAngleChangedListener.onAngleChanged(degree);
             }

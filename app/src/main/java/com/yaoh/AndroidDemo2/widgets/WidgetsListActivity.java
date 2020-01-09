@@ -7,11 +7,18 @@ import android.view.View;
 import android.widget.Button;
 
 import com.yaoh.AndroidDemo2.R;
+import com.yaoh.AndroidDemo2.widgets.dialog.DialogSimpleFragment;
+import com.yaoh.AndroidDemo2.widgets.mapview.MapViewTestActivity;
 import com.yaoh.AndroidDemo2.widgets.follow_view.FollowViewTestActivity;
+import com.yaoh.AndroidDemo2.widgets.matrix.MatrixActivity;
 
 public class WidgetsListActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button btn_follow_view;
+    private Button btn_map_view;
+    private Button btn_Matrix;
+    private Button btn_dialog;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +27,15 @@ public class WidgetsListActivity extends AppCompatActivity implements View.OnCli
 
         btn_follow_view = findViewById(R.id.btn_follow_view);
         btn_follow_view.setOnClickListener(this);
+
+        btn_map_view = findViewById(R.id.btn_map_view);
+        btn_map_view.setOnClickListener(this);
+
+        btn_Matrix = findViewById(R.id.btn_Matrix);
+        btn_Matrix.setOnClickListener(this);
+
+        btn_dialog = findViewById(R.id.btn_dialog);
+        btn_dialog.setOnClickListener(this);
     }
 
     @Override
@@ -30,6 +46,20 @@ public class WidgetsListActivity extends AppCompatActivity implements View.OnCli
                 startActivity(new Intent(this, FollowViewTestActivity.class));
                 break;
             }
+            case R.id.btn_map_view: {
+                startActivity(new Intent(this, MapViewTestActivity.class));
+                break;
+            }
+            case R.id.btn_Matrix:{
+                startActivity(new Intent(this, MatrixActivity.class));
+                break;
+            }
+            case R.id.btn_dialog:{
+                DialogSimpleFragment dialogSimpleFragment = new DialogSimpleFragment();
+                dialogSimpleFragment.showDialog(this);
+                break;
+            }
+
         }
     }
 }

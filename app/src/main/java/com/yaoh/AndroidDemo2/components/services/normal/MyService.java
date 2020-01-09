@@ -33,8 +33,7 @@ public class MyService extends Service {
     public void onCreate() {
         super.onCreate();
         Log.e(TAG, "onCreate--->");
-
-        setForegroundService();
+//        setForegroundService();
     }
 
     @Override

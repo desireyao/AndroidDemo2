@@ -29,4 +29,32 @@
         android:layout_marginTop="5dp"
         android:text="后台权限管理" />
 
+    <Button
+        android:id="@+id/btn_sourceCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="源码相关" />
+
+    <Button
+        android:id="@+id/btn_memoryLeak"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="内存泄露" />
+
+    <Button
+        android:id="@+id/btn_sqlite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="SQLITE" />
+
+    <Button
+        android:id="@+id/btn_liveData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="liveData" />
+
 </LinearLayout>

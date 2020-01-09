@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.yaoh.AndroidDemo2">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <activity android:name=".liveData.MVVMActivity" />
+
+        <activity android:name=".webview.WebviewDemoActivity" />
+        <activity android:name=".sqlite.AndroidSqliteActivity" />
+        <activity android:name=".memory_leak.MemoryLeakActivity" />
+        <activity android:name=".source_code.eventbus.EventBusActivity" />
+        <activity android:name=".source_code.rxjava.RxJavaActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,7 +36,11 @@
 
         <activity android:name=".widgets.follow_view.FollowViewTestActivity" />
         <activity android:name=".widgets.WidgetsListActivity" />
-        <activity android:name=".protect_setting.ProtectSettingActivity"></activity>
+        <activity android:name=".protect_setting.ProtectSettingActivity" />
+        <activity android:name=".widgets.mapview.MapViewTestActivity" />
+        <activity android:name=".source_code.handler.HandlerActivity" />
+        <activity android:name=".source_code.SoureCodeListActivity" />
+        <activity android:name=".widgets.matrix.MatrixActivity" />
     </application>
 
 </manifest>

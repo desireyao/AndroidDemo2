@@ -1,1 +1,1 @@
-include ':app', ':JavaDemo', ':BPermissonProtectLib'
+include ':app', ':JavaDemo', ':BPermissonProtectLib', ':BinderDemo1', ':BinderDemo2', ":BSMapViewLib"

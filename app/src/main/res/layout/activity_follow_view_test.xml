@@ -4,15 +4,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clipChildren="false"
     tools:context="com.yaoh.AndroidDemo2.widgets.follow_view.FollowViewTestActivity">
 
-
     <ImageView
-        android:id="@+id/img"
+        android:id="@+id/imageview"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_centerInParent="true"
         android:background="@mipmap/ic_launcher" />
 
+    <!--<com.yaoh.AndroidDemo2.widgets.follow_view.mapview.BSMapLayout-->
+        <!--android:id="@+id/mapLayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+    <!--</com.yaoh.AndroidDemo2.widgets.follow_view.mapview.BSMapLayout>-->
+
+
+    <!--<FrameLayout-->
+    <!--android:id="@+id/new_player_fl"-->
+    <!--android:layout_width="114dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:clipChildren="false"-->
+    <!--android:clipToPadding="false">-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/new_player_team"-->
+    <!--android:layout_width="110dp"-->
+    <!--android:layout_height="110dp"-->
+    <!--android:layout_marginLeft="-20dp"-->
+    <!--android:layout_marginTop="45dp"-->
+    <!--android:alpha="40" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/new_player_logo"-->
+    <!--android:layout_width="109dp"-->
+    <!--android:layout_height="79.5dp"-->
+    <!--android:layout_marginTop="81dp"-->
+    <!--android:scaleType="fitXY"-->
+    <!--android:src="@drawable/data_team_logo_loading_76px" />-->
+
+    <!--</FrameLayout>-->
 
 </RelativeLayout>

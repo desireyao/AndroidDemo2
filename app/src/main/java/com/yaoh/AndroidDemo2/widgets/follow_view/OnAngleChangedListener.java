@@ -6,6 +6,6 @@ package com.yaoh.AndroidDemo2.widgets.follow_view;
 
 public interface OnAngleChangedListener {
 
-    public void onAngleChanged(float degree);
+    public void onAngleChanged(int degree);
 
 }
