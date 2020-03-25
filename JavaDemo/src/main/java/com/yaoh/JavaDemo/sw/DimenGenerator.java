@@ -11,12 +11,12 @@ import java.math.BigDecimal;
  */
 public class DimenGenerator {
 
-    private static final int MAX_SIZE = 360;
+    private static final int MAX_SIZE = 426;
 
-    private static final int DESIGN_WIDTH = 360;
+    private static final int DESIGN_WIDTH = 426;
 
     public static void main(String[] args) {
-        int[] arr = new int[]{300, 320, 360, 384, 392, 400, 410, 432, 450, 480, 533, 592, 600, 640};
+        int[] arr = new int[]{300, 320, 360, 384, 392, 400, 410,426, 432, 450, 480, 533,540, 592, 600, 640};
         for (int swdp : arr) {
             makeAll(DESIGN_WIDTH, swdp, "./sw/res/values");
         }
@@ -38,7 +38,8 @@ public class DimenGenerator {
             sb.append(String.format("<dimen name=\"base_dpi\">%ddp</dimen>\r\n", swdp));
             for (int i = 0; i <= MAX_SIZE; i++) {
                 dpValue = px2dip((float) i, swdp, designWidth);
-                sb.append(String.format("<dimen name=\"qb_px_%1$d\">%2$.2fdp</dimen>\r\n", i, dpValue));
+                // qb_px_%1$d
+                sb.append(String.format("<dimen name=\"sdp_%1$d\">%2$.2fdp</dimen>\r\n", i, dpValue));
             }
             sb.append("</resources>\r\n");
         } catch (Exception e) {

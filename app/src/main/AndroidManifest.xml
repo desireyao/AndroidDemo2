@@ -14,9 +14,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-
+        <activity android:name=".AndroidUtilsActivity"></activity>
+        <activity android:name=".blur.BlurActivity" />
+        <activity android:name=".anim.AnimActivity" />
+        <activity android:name=".widgets.common_view.CommonWidgetActivity" />
         <activity android:name=".liveData.MVVMActivity" />
-
         <activity android:name=".webview.WebviewDemoActivity" />
         <activity android:name=".sqlite.AndroidSqliteActivity" />
         <activity android:name=".memory_leak.MemoryLeakActivity" />

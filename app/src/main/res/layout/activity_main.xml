@@ -57,4 +57,18 @@
         android:layout_marginTop="5dp"
         android:text="liveData" />
 
+    <Button
+        android:id="@+id/btn_anim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="动画" />
+
+    <Button
+        android:id="@+id/btn_androidUtils"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="AndroidUtils" />
+
 </LinearLayout>

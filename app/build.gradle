@@ -64,5 +64,7 @@ dependencies {
 //    // alternatively, just LiveData
     implementation "android.arch.lifecycle:livedata:1.1.1"
 
+//    implementation 'com.github.pinguo-zhouwei:EasyBlur:v1.0.0'
+
 
 }

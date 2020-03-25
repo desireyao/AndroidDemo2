@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.yaoh.AndroidDemo2.anim.AnimActivity;
 import com.yaoh.AndroidDemo2.components.ComponentListActivity;
 import com.yaoh.AndroidDemo2.liveData.MVVMActivity;
 import com.yaoh.AndroidDemo2.memory_leak.MemoryLeakActivity;
@@ -22,6 +23,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private Button btn_memoryLeak;
     private Button btn_sqlite;
     private Button btn_liveData;
+    private Button btn_anim;
+    private Button btn_androidUtils;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +52,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
         btn_liveData = findViewById(R.id.btn_liveData);
         btn_liveData.setOnClickListener(this);
+
+        btn_anim = findViewById(R.id.btn_anim);
+        btn_anim.setOnClickListener(this);
+
+        btn_androidUtils = findViewById(R.id.btn_androidUtils);
+        btn_androidUtils.setOnClickListener(this);
     }
 
     @Override
@@ -81,6 +90,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             }
             case R.id.btn_liveData: {
                 startActivity(new Intent(this, MVVMActivity.class));
+                break;
+            }
+            case R.id.btn_anim: {
+                startActivity(new Intent(this, AnimActivity.class));
+                break;
             }
         }
     }

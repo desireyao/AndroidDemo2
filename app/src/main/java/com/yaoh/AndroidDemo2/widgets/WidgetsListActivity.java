@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 
 import com.yaoh.AndroidDemo2.R;
+import com.yaoh.AndroidDemo2.blur.BlurActivity;
+import com.yaoh.AndroidDemo2.widgets.common_view.CommonWidgetActivity;
 import com.yaoh.AndroidDemo2.widgets.dialog.DialogSimpleFragment;
 import com.yaoh.AndroidDemo2.widgets.mapview.MapViewTestActivity;
 import com.yaoh.AndroidDemo2.widgets.follow_view.FollowViewTestActivity;
@@ -18,7 +20,8 @@ public class WidgetsListActivity extends AppCompatActivity implements View.OnCli
     private Button btn_map_view;
     private Button btn_Matrix;
     private Button btn_dialog;
-
+    private Button btn_common_widget;
+    private Button btn_blur;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +39,13 @@ public class WidgetsListActivity extends AppCompatActivity implements View.OnCli
 
         btn_dialog = findViewById(R.id.btn_dialog);
         btn_dialog.setOnClickListener(this);
+
+        btn_common_widget = findViewById(R.id.btn_common_widget);
+        btn_common_widget.setOnClickListener(this);
+
+        btn_blur = findViewById(R.id.btn_blur);
+        btn_blur.setOnClickListener(this);
+
     }
 
     @Override
@@ -50,13 +60,21 @@ public class WidgetsListActivity extends AppCompatActivity implements View.OnCli
                 startActivity(new Intent(this, MapViewTestActivity.class));
                 break;
             }
-            case R.id.btn_Matrix:{
+            case R.id.btn_Matrix: {
                 startActivity(new Intent(this, MatrixActivity.class));
                 break;
             }
-            case R.id.btn_dialog:{
+            case R.id.btn_dialog: {
                 DialogSimpleFragment dialogSimpleFragment = new DialogSimpleFragment();
                 dialogSimpleFragment.showDialog(this);
+                break;
+            }
+            case R.id.btn_common_widget: {
+                startActivity(new Intent(this, CommonWidgetActivity.class));
+                break;
+            }
+            case R.id.btn_blur: {
+                startActivity(new Intent(this, BlurActivity.class));
                 break;
             }
 

@@ -29,7 +29,7 @@ public class GenerateValueFiles {
      */
     private final static String VALUE_TEMPLATE = "values-{0}x{1}";
 
-    private static final String SUPPORT_DIMESION = "1920,1080;1280,720;";
+    private static final String SUPPORT_DIMESION = "1920,1080;1280,720;1280,568;";
 
     private String supportStr = SUPPORT_DIMESION;
 
@@ -145,8 +145,8 @@ public class GenerateValueFiles {
     }
 
     public static void main(String[] args) {
-        int baseW = 2634;
-        int baseH = 1480; // 1496
+        int baseW = 1334;
+        int baseH = 750; // 1496
         String addition = "";
         try {
             if (args.length >= 3) {

@@ -31,4 +31,17 @@
         android:layout_height="wrap_content"
         android:text="自定义Dialog" />
 
+    <Button
+        android:id="@+id/btn_common_widget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="常见控件" />
+
+    <Button
+        android:id="@+id/btn_blur"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="高斯模糊" />
+
+
 </LinearLayout>
