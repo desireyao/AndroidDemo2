@@ -11,7 +11,7 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class Main {
 
-//        static Map<Integer, String> mMap = new ConcurrentHashMap<>();
+    //        static Map<Integer, String> mMap = new ConcurrentHashMap<>();
 //    static Map<Integer, String> mMap = Collections.synchronizedMap(new HashMap<>());
     static Map<Integer, String> mMap = new HashMap<>();
 

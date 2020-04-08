@@ -1,9 +1,9 @@
-package com.yaoh.JavaDemo.quickSort;
+package com.yaoh.JavaDemo.algo.quickSort;
 
 /**
  * Created by yaoh on 2019/2/17
  */
-public class Test {
+public class Main {
 
     private static void printArr(int[] arr) {
         for (int anArr : arr) {

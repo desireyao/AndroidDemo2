@@ -10,8 +10,8 @@ public class Model {
     public void test() {
         Model model = new Model();
         Class mClass = model.getClass();
-
         System.out.println("model class ---> " + model.getClass());
+
         Method[] methods = mClass.getDeclaredMethods();
         for (Method method : methods) {
             System.out.println("method-------> " + method.toString());

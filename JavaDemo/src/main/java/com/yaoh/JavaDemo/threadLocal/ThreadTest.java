@@ -11,7 +11,7 @@ public class ThreadTest {
             @Override
             public void run() {
                 super.run();
-                mThreadLocal.set("t1");
+//                mThreadLocal.set("t1============> ");
                 System.out.println("t1---->" + mThreadLocal.get());
             }
         };
@@ -21,11 +21,21 @@ public class ThreadTest {
             @Override
             public void run() {
                 super.run();
-                mThreadLocal.set("t2");
+//                mThreadLocal.set("t2");
                 System.out.println("t2---->" + mThreadLocal.get());
             }
         };
         t2.start();
+
+        Thread t3 = new Thread() {
+            @Override
+            public void run() {
+                super.run();
+//                mThreadLocal.set("t2");
+                System.out.println("t3---->" + mThreadLocal.get());
+            }
+        };
+        t3.start();
     }
 
 
