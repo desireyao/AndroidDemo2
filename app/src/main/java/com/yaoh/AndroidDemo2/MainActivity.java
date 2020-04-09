@@ -11,6 +11,7 @@ import com.yaoh.AndroidDemo2.liveData.MVVMActivity;
 import com.yaoh.AndroidDemo2.memory_leak.MemoryLeakActivity;
 import com.yaoh.AndroidDemo2.protect_setting.ProtectSettingActivity;
 import com.yaoh.AndroidDemo2.source_code.SoureCodeListActivity;
+import com.yaoh.AndroidDemo2.sqlite.AndroidSqliteActivity;
 import com.yaoh.AndroidDemo2.webview.WebviewDemoActivity;
 import com.yaoh.AndroidDemo2.widgets.WidgetsListActivity;
 
@@ -30,7 +31,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
         btn_android_components = findViewById(R.id.btn_android_components);
         btn_android_components.setOnClickListener(this);
@@ -85,7 +85,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             }
             case R.id.btn_sqlite: {
-                startActivity(new Intent(this, WebviewDemoActivity.class));
+                startActivity(new Intent(this, AndroidSqliteActivity.class));
                 break;
             }
             case R.id.btn_liveData: {

@@ -46,26 +46,28 @@ public class AndroidSqliteActivity extends AppCompatActivity implements View.OnC
                 }
             }).start();
 
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    dbManager.query();
-                }
-            }).start();
-
+//            new Thread(new Runnable() {
+//                @Override
+//                public void run() {
+//                    dbManager.query();
+//                }
+//            }).start();
+//
             new Thread(new Runnable() {
                 @Override
                 public void run() {
                     dbManager.add();
                 }
             }).start();
+//
+//            new Thread(new Runnable() {
+//                @Override
+//                public void run() {
+//                    dbManager.query();
+//                }
+//            }).start();
 
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    dbManager.query();
-                }
-            }).start();
+
         } else if (id == R.id.btn_query) {
             new Thread(new Runnable() {
                 @Override
