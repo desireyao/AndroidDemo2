@@ -46,7 +46,6 @@ public class MyService extends Service {
     public void onDestroy() {
         super.onDestroy();
         Log.e(TAG, "onDestroy--->");
-
 //        startService(new Intent(this, MyService.class));
     }
 

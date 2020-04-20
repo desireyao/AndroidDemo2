@@ -10,6 +10,8 @@ import java.util.LinkedHashMap;
 public class Main {
 
     public static void main(String[] args) {
+
+        // LinkedHashMap 支持访问排序
         LinkedHashMap<Integer, Integer> map = new LinkedHashMap<>(8, 0.75f, true);
 //        LinkedHashMap<Integer, Integer> map = new LinkedHashMap<>();
         map.put(1, 1);

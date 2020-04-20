@@ -1,4 +1,4 @@
-package com.yaoh.JavaDemo.binaraytree;
+package com.yaoh.JavaDemo.algo.binaraytree;
 
 
 /**

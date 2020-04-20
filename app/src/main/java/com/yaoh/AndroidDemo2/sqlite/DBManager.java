@@ -28,32 +28,42 @@ public class DBManager {
         this.mContext = context;
     }
 
-
+    /**
+     * 打开数据库
+     *
+     * @return
+     */
     public synchronized SQLiteDatabase getWritableDatabase() {
         int count = mOpenCounter.incrementAndGet();
-        LogTool.LogE_DEBUG(TAG, "getWritableDatabase---> count: " + count);
+        LogTool.LogE_DEBUG(TAG, " getWritableDatabase---> count: " + count);
         if (count == 1) {
-            // Opening new database
             mDatabase = mHelper.getWritableDatabase();
         }
         return mDatabase;
     }
 
+    /**
+     * 打开数据库
+     *
+     * @return
+     */
     public synchronized SQLiteDatabase getReadableDatabase() {
         int count = mOpenCounter.incrementAndGet();
-        LogTool.LogE_DEBUG(TAG, "getReadableDatabase---> count: " + count);
+        LogTool.LogE_DEBUG(TAG, " getReadableDatabase---> count: " + count);
         if (count == 1) {
-            // Opening new database
             mDatabase = mHelper.getReadableDatabase();
         }
         return mDatabase;
     }
 
+
+    /**
+     * 关闭数据库
+     */
     public synchronized void closeDatabase() {
         int count = mOpenCounter.decrementAndGet();
-        LogTool.LogE_DEBUG(TAG, "closeDatabase---> count: " + count);
+        LogTool.LogE_DEBUG(TAG, " closeDatabase---> count: " + count);
         if (count == 0) {
-            // Closing database
             mDatabase.close();
         }
     }
@@ -61,20 +71,24 @@ public class DBManager {
     /**
      * 添加一条记录
      */
-    public long add() {
+    public long insert() {
+        LogTool.LogD(TAG, "START add============> ");
         getWritableDatabase();
 
         ContentValues values = new ContentValues();
-        values.put("name", "yaoh");
+        values.put("name", "xxx");
         values.put("age", 28);
-        values.put("address", "shanghaipudong");
+        values.put("address", "xxxxxx");
         long id = mDatabase.insert("student", null, values);
-//        mDatabase.close();
-        LogTool.LogE_DEBUG(TAG, "add---> id: " + id + " currentThreadName: " + Thread.currentThread().getName());
+        LogTool.LogE_DEBUG(TAG, "add---> id: " + id + " thread: " + Thread.currentThread().getName());
         closeDatabase();
+        LogTool.LogD(TAG, "END add============> ");
         return id;
     }
 
+    /**
+     * 查询
+     */
     public void query() {
         getReadableDatabase();
 
@@ -88,7 +102,18 @@ public class DBManager {
         } while (cursor.moveToNext());
         LogTool.LogE_DEBUG(TAG, "query---> currentThreadName: " + Thread.currentThread().getName());
         cursor.close();
-//        mDatabase.close();
+        closeDatabase();
+    }
+
+    /**
+     * 删除
+     */
+    public void delete() {
+        getWritableDatabase();
+
+        //删除数据库里的 数据
+        int result = mDatabase.delete("student", "name" + "==?", new String[]{"xxx"});
+        LogTool.LogE_DEBUG(TAG, "delete---> result: " + result);
         closeDatabase();
     }
 }

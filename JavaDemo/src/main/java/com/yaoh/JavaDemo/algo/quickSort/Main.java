@@ -1,54 +1,107 @@
 package com.yaoh.JavaDemo.algo.quickSort;
 
+import java.awt.DisplayMode;
+import java.util.Collections;
+
 /**
- * Created by yaoh on 2019/2/17
+ * @author yaoh
+ * @date 2020/4/6 4:42 PM
+ * @description 快速排序是种不稳定的排序 时间复杂度为nlog2N
  */
 public class Main {
 
-    private static void printArr(int[] arr) {
-        for (int anArr : arr) {
-            System.out.print(anArr + " ");
-        }
-    }
-
-    private static int partition(int[] arr, int left, int right) {
-        int temp = arr[left];
-        while (right > left) {
-            // 先判断基准数和后面的数依次比较
-            while (temp <= arr[right] && left < right) {
-                --right;
-            }
-            // 当基准数大于了 arr[right]，则填坑
-            if (left < right) {
-                arr[left] = arr[right];
-                ++left;
-            }
-            // 现在是 arr[right] 需要填坑了
-            while (temp >= arr[left] && left < right) {
-                ++left;
-            }
-            if (left < right) {
-                arr[right] = arr[left];
-                --right;
-            }
-        }
-        arr[left] = temp;
-        return left;
-    }
-
-    private static void quickSort(int[] arr, int left, int right) {
-        if (arr == null || left >= right || arr.length <= 1)
-            return;
-        int mid = partition(arr, left, right);
-//        quickSort(arr, left, mid);
-//        quickSort(arr, mid + 1, right);
-    }
-
-
     public static void main(String[] args) {
-        int[] arr = {6, 4, 3, 2, 7, 9, 1, 8, 5};
-        quickSort(arr, 0, arr.length - 1);
-        printArr(arr);
+        int[] array = new int[]{23, 46, 0, 8, 11, 18};
+        quickSort2(array, 0, array.length - 1);
+
+        for (int num : array) {
+            System.out.println(num + ",");
+        }
+    }
+
+    private static void quickSort2(int array[], int begin, int end) {
+        if (end - begin <= 0) return;
+        int x = array[begin];
+        int low = begin;
+        int high = end;
+        boolean direction = true;
+
+        L1:
+        while (low < high) {
+            if (direction) {
+                for (int i = high; i > low; i--) {
+                    if (array[i] <= x) {
+                        array[low] = array[i];
+                        low++;
+                        high = i;
+                        direction = !direction;
+                        continue L1;
+                    }
+                }
+                high = low;
+            } else {
+                for (int i = low; i < high; i++) {
+                    if (array[i] >= x) {
+                        array[high] = array[i];
+                        high--;
+                        low = i;
+                        direction = !direction;
+                        continue L1;
+                    }
+                }
+                low = high;
+            }
+        }
+        array[low] = x;
+        //前半部分
+        quickSort(array, begin, low - 1);
+        // 后半部分
+        quickSort(array, low + 1, end);
+    }
+
+    /**
+     * @param array
+     * @param begin
+     * @param end
+     */
+    private static void quickSort(int[] array, int begin, int end) {
+        if (end - begin <= 0) return;
+        int x = array[begin];
+        int low = begin;
+        int high = end;
+
+        boolean direction = true;
+
+        L1:
+        while (low < high) {
+            if (direction) {
+                for (int i = high; i > low; i--) {
+                    if (array[i] <= x) {
+                        array[low++] = array[i];
+                        high = i;
+                        direction = !direction;
+                        continue L1;
+                    }
+                }
+                high = low;
+            } else {
+                for (int i = low; i < high; i++) {
+                    if (array[i] >= x) {
+                        array[high--] = array[i];
+                        low = i;
+                        direction = !direction;
+                        continue L1;
+                    }
+                }
+                low = high;
+            }
+        }
+        array[low] = x;
+
+        //前半部分
+        quickSort(array, begin, low - 1);
+        // 后半部分
+        quickSort(array, low + 1, end);
     }
 
 }
