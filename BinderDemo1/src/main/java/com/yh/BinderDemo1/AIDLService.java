@@ -18,7 +18,7 @@ public class AIDLService extends Service {
     IPerson.Stub stub = new IPerson.Stub() {
         @Override
         public String greet(String someone) throws RemoteException {
-            Log.i(TAG, "greet() called");
+            Log.e(TAG, "greet()  demo1 called===============>");
             return "hello, " + someone;
         }
     };

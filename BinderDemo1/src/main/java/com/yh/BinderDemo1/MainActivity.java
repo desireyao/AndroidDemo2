@@ -30,8 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     private IPerson person;
 
-    private ServiceConnection conn = new ServiceConnection() {
-
+    private ServiceConnection mServiceConnection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
             Log.e("ServiceConnection", "onServiceConnected() called");
@@ -57,9 +56,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ACTION_BIND_SERVICE);
-//                Intent intent = new Intent(MainActivity.this,AIDLService.class);
+//                Intent intent = new Intent(MainActivity.this, AIDLService.class);
                 intent.setPackage("com.yh.BinderDemo2");
-                bindService(intent, conn, Context.BIND_AUTO_CREATE);
+                bindService(intent, mServiceConnection, Context.BIND_AUTO_CREATE);
 
                 bindBtn.setEnabled(false);
                 greetBtn.setEnabled(true);
@@ -84,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         unbindBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                unbindService(conn);
+                unbindService(mServiceConnection);
 
                 bindBtn.setEnabled(true);
                 greetBtn.setEnabled(false);

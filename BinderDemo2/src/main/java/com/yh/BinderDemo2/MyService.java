@@ -19,20 +19,20 @@ public class MyService extends Service {
     IPerson.Stub mBinder = new IPerson.Stub() {
         @Override
         public String greet(String someone) throws RemoteException {
-            return "Binder Demo2 greet!";
+            return "Binder Demo2 greet! ================> someone： " + someone;
         }
     };
 
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
-        Log.e(TAG,"onBind ---> 222");
+        Log.e(TAG, "onBind ---> 222");
         return mBinder;
     }
 
     @Override
     public void onCreate() {
         super.onCreate();
-        Log.e(TAG,"onCreate---> 222");
+        Log.e(TAG, "onCreate---> 222");
     }
 }
